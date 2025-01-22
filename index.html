@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bucket List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #bucketLists div {
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+    }
+    button {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>My all work and a wee bit of sketching bucket List</h1>
+  </header>
+
+<form>
+  <!--Select category in drop-down menu-->
+  <section>
+    <p>
+      <label for="category">
+        <span>Category:</span>
+      </label>
+      <select id="category" name="activityCategory">
+        <option value="distro"> Distro to explore. </option>
+        <option value="app"> Apps to explore. </option>
+        <option value="sketching"> Sketching tools to play around with.</option>
+        <option value="programmingLanguage"> Programming languages to learn. </option>
+        <option value="webprogrammingConcept"> Web programming concepts to grasp. </option>
+      </select>
+    </p>
+  </section>
+
+  <!--The idea here is that I should add add a table with a kind of single column heatmap of the extent to 
+  which I feel that I have completed the task. So hottest at the top.
+  Each row in the resulting heatmap will contain the name of the task, the category of the task, 
+  and the level of completion.
+  
+  In essence - this is the structure of the output: 
+  React programmingLanguage 20%
+  DOM webprogrammingConcept 5%
+  Parrot Distro 2%
+
+  The percentage should be represented by opacity of chosen color, so hues of blue for instance.
+  The categories should be colored with color boxes (I think).
+
+  sorted by the level of completion
+  sorted by each category
+  sorted by the name of the task
+
+  -->
+
+  <!--Add or remove activity to/from the list-->
+  <section>
+  <p>
+      <label for="villgöra">
+        <span> Vad vill du göra eller ta bort? </span>
+      </label>
+      <input type="text" id="activity" name="activityName">
+    </p>
+    <p>
+      <button type="läggTill">Lägg till i listan</button>
+      <button type="taBort">Ta bort från listan</button>
+    </p>
+  </section>
+</form> 
+  
+  <script type ="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
